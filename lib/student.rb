@@ -27,7 +27,7 @@ class Student
     end
 
     def save
-        sql = "INSERT INTO students (name, grade) VALUES (#{self.name}, #{self.grade})"
+        sql = "INSERT INTO students (name, grade) VALUES ('#{self.name}', '#{self.grade}')"
         puts DB[:conn].execute(sql)
     end
 end
