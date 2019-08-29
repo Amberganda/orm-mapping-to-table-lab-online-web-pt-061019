@@ -25,4 +25,7 @@ class Student
         sql = "DROP TABLE students"
         DB[:conn].execute(sql)
     end
+
+    def save
+        sql = "INSERT INTO students (name, grade) VALUES (#{self.name}, #{self.grade})"
 end
